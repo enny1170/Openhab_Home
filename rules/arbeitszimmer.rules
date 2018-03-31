@@ -1,0 +1,49 @@
+/* ############################################################################ */
+/* Initialisierung */
+/* ############################################################################ */
+
+rule "Init virtual Items"
+when
+	System started
+then
+	if (A_all_switch.state == Uninitialized) {
+		A_all_switch.postUpdate(OFF)
+	}
+end
+
+/* ########################################################################### */
+/* All Switch rules */
+/* ########################################################################### */
+
+rule "Light switches changed to ON"
+when
+    Item A_light_switch received update ON or Item A_led_switch received update ON
+then
+    A_all_switch.postUpdate(ON)
+end
+
+rule "Light switches changed to OFF"
+when
+    Item A_light_switch received update OFF or Item A_led_switch received update OFF
+then
+    if(A_light_switch.State == OFF && A_led_switch.State == OFF)
+    {
+        A_all_switch.postUpdate(OFF)
+    }
+end
+
+rule "All Switch received Command ON"
+when
+    A_all_switch received command ON
+then
+    A_light_switch.sendCommand(ON)
+    A_led_switch.sendCommand(ON)
+end
+
+rule "All Switch received Command OFF"
+when
+    A_all_switch received command OFF
+then
+    A_light_switch.sendCommand(OFF)
+    A_led_switch.sendCommand(OFF)
+end

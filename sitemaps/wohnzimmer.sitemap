@@ -1,0 +1,8 @@
+sitemap wohnzimmer label="Wohnzimmer" {
+    Frame label="Sensor 12" {
+		Switch item=w_light_switch
+		Switch item=w_light2_switch
+		}
+
+}
+

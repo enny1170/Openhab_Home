@@ -1,0 +1,14 @@
+sitemap halle label="Halle" {
+    Frame label="Sensor 16" {
+		Switch item=H_Heater1_switch
+		}
+		Frame label="Halle"{
+			Switch item=H_arduino_switch
+			Switch item=H_dmx_switch
+			Text item=H_H_temperature
+			Text item=H_H_humidity
+			Switch item=H_revo_switch			
+		}
+
+}
+

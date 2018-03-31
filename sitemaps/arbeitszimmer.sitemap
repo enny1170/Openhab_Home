@@ -1,0 +1,18 @@
+sitemap halle label="Arbeitszimmer" {
+    Frame label="Sensor 11,14" {
+		Switch item=A_all_switch
+		Switch item=A_light_switch
+		Switch item=A_led_switch
+		Text item=A_temperature
+		Text item=A_humidity
+		Text item=A_lightlevel
+		Text label="Verlauf"
+			{
+				Chart item=A_temperature refresh=300 period=d legend=true
+				Chart item=A_humidity refresh=300 period=d legend=true
+				Chart item=A_lightlevel refresh=300 period=d legend=true
+			}
+		}
+
+}
+

@@ -1,0 +1,17 @@
+Strategies {
+	everyMinute : "0 * * * * ?"
+	everyHour : "0 0 * * * ?"
+	everyDay : "0 0 0 * * ?"
+	default = everyChange
+}
+Items {
+// persist everything when the value is updated, just a default, and restore them from database on startup
+	* : strategy = everyChange, restoreOnStartup
+// next we define specific strategies of everyHour for anything in the Temperature group, and and every minute for Humidity
+// Temperature* : strategy = everyMinute
+// Humidity* : strategy = everyMinute
+// alternatively you can add specific items here, such as
+// Bedroom_Humidity,JamesInOffice : strategy = everyMinute
+	A_temperature,A_humidity,A_pressure,A_lightlevel : strategy = everyMinute
+}
+

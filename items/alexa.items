@@ -1,0 +1,2 @@
+Switch t_light_switch "Licht" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/11/1/1/0/3:command:ON:1],>[localmqtt:mygateway1-in/11/1/1/0/3:command:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:ON:1]"}
+

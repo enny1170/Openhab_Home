@@ -1,0 +1,8 @@
+Switch H_Heater1_switch "Heizung 1" <heater> ["heating"] {mqtt=">[localmqtt:mygateway1-in/16/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/16/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/16/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/16/1/1/0/2:state:ON:1]"}
+
+Switch H_arduino_switch "LED-Leiste" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/18/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/18/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/18/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/18/1/1/0/2:state:ON:1]"}
+Switch H_dmx_switch "DMX-System" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/18/2/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/18/2/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/18/2/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/18/2/1/0/2:state:ON:1]"}
+Number H_H_humidity "Luftfeuchte [%.1f %%]" <humidity> {mqtt="<[localmqtt:mygateway1-out/18/4/1/0/1:state:default]"}
+Number H_H_temperature "Temperatur [%.1f °C]" <temperature> {mqtt="<[localmqtt:mygateway1-out/18/3/1/0/0:state:default]"}
+Switch H_revo_switch "Revo" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/17/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/17/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/17/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/17/1/1/0/2:state:ON:1]"}
+
