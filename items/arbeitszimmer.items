@@ -5,9 +5,9 @@ Number A_lightlevel "Helligkeit [%.1f %%]" <lightlevel> (Arbeitszimmer) {mqtt="<
 Number A_pressure "Luftdruck [%.1f Pa]" <pressure> (Arbeitszimmer) {mqtt="<[localmqtt:mygateway1-out/11/2/1/0/3:state:default]"}
 Number A_altitude "Altitude [%.1f m]" (Arbeitszimmer) {mqtt="<[localmqtt:mygateway1-out/11/5/1/0/48:state:default]"}
 Number A_dewpoint "Luftfeuchte [%.1f °C]" <temperature> (Arbeitszimmer) {mqtt="<[localmqtt:mygateway1-out/11/6/1/0/48:state:default]"}
-Switch A_light_switch "Arbeitszimmer Licht" <light> ["Lighting"] (Arbeitszimmer){mqtt=">[localmqtt:mygateway1-in/11/1/1/0/3:command:ON:1],>[localmqtt:mygateway1-in/11/1/1/0/3:command:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:ON:1]"}
-Switch A_led_switch "Arbeitszimmer LED" <light> ["Lighting"] (Arbeitszimmer) {mqtt=">[localmqtt:mygateway1-in/14/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/14/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/14/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/14/1/1/0/2:state:ON:1]"}
-Switch A_all_switch "Arbeitszimmer alles" <light> ["Lighting"] (Arbeitszimmer)
+Switch A_light_switch "Arbeitszimmer Licht" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/11/1/1/0/3:command:ON:1],>[localmqtt:mygateway1-in/11/1/1/0/3:command:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:ON:1]"}
+Switch A_led_switch "Arbeitszimmer LED" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/14/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/14/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/14/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/14/1/1/0/2:state:ON:1]"}
+Switch A_all_switch "Arbeitszimmer alles" ["Lighting"] 
 
 
 

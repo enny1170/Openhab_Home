@@ -1,4 +1,4 @@
-sitemap halle label="Arbeitszimmer" {
+sitemap arbeitszimmer label="Arbeitszimmer" {
     Frame label="Sensor 11,14" {
 		Switch item=A_all_switch
 		Switch item=A_light_switch
