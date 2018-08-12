@@ -3,3 +3,6 @@ All thing files have to have the ".things" file extension and must follow a spec
 
 Check out the openHAB documentation for more details:
 https://www.openhab.org/docs/configuration/things.html
+
+
+test
