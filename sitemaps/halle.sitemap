@@ -1,14 +1,39 @@
-sitemap halle label="Halle" {
-    Frame label="Sensor 16" {
-		Switch item=H_Heater1_switch
+sitemap halle label="Scheune"
+{
+	Frame label="Lounge"
+	{
+		Text item=L_temperature
+		Text item=L_humidity
+		Switch item=L_Heater
+		Setpoint item=L_TempSetpoint minValue=16 maxValue=28 step=0.5
+		Group item=IrHeater label="Heizkörper"
+		Text label="Verlauf"
+		{
+			Chart item=L_temperature refresh=300 period=d legend=true
+			Chart item=L_humidity refresh=300 period=d legend=true
 		}
+		Text label="Receiver"
+		{
+			Switch item=Y_Main_Zone_Power label="Main Power"
+			Switch item=Y_Zone2_Power label="Zone 2 Power"
+
+		}
+		
+	}
 		Frame label="Halle"{
 			Switch item=H_arduino_switch
 			Switch item=H_dmx_switch
+			Switch item=H_revo_switch
 			Text item=H_H_temperature
-			Text item=H_H_humidity
-			Switch item=H_revo_switch			
-		}
+			Text item=H_H_humidity			
+			Text label="Verlauf"
+			{
+				Chart item=H_H_temperature refresh=300 period=d legend=true
+				Chart item=H_H_humidity refresh=300 period=d legend=true
+			}			
+		}	
 
 }
+
+
 

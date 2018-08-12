@@ -12,6 +12,6 @@ Items {
 // Humidity* : strategy = everyMinute
 // alternatively you can add specific items here, such as
 // Bedroom_Humidity,JamesInOffice : strategy = everyMinute
-	A_temperature,A_humidity,A_pressure,A_lightlevel : strategy = everyMinute
+	A_temperature,A_humidity,A_pressure,A_lightlevel,L_humidity,L_temperature,H_H_humidity,H_H_temperature : strategy = everyMinute
 }
 

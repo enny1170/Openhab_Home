@@ -1,8 +1,13 @@
-Switch H_Heater1_switch "Heizung 1" <heater> ["heating"] {mqtt=">[localmqtt:mygateway1-in/16/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/16/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/16/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/16/1/1/0/2:state:ON:1]"}
+Group Lounge 
+Group IrHeater
+Number L_humidity "Luftfeuchte [%.1f %%]" <humidity> (Lounge) {mqtt="<[localmqtt:halle/gw2-out/15/2/1/0/1:state:default]"} 
+Number L_temperature "Temperatur [%.1f °C]" <temperature> (Lounge) {mqtt="<[localmqtt:halle/gw2-out/15/1/1/0/0:state:default]"} 
+Number L_lightlevel "Helligkeit [%.1f %%]" <lightlevel> (Lounge){mqtt="<[localmqtt:halle/gw2-out/15/3/1/0/23:state:default]"} 
+Switch L_light_switch "Licht" (Lounge) {mqtt=">[localmqtt:halle/gw2-in/15/1/1/0/3:command:ON:1],>[localmqtt:halle/gw2-in/15/1/1/0/3:command:OFF:0],<[localmqtt:halle/gw2-out/15/1/1/0/3:state:OFF:0],<[localmqtt:halle/gw2-out/15/1/1/0/3:state:ON:1]"}
 
-Switch H_arduino_switch "LED-Leiste" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/18/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/18/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/18/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/18/1/1/0/2:state:ON:1]"}
-Switch H_dmx_switch "DMX-System" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/18/2/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/18/2/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/18/2/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/18/2/1/0/2:state:ON:1]"}
-Number H_H_humidity "Luftfeuchte [%.1f %%]" <humidity> {mqtt="<[localmqtt:mygateway1-out/18/4/1/0/1:state:default]"}
-Number H_H_temperature "Temperatur [%.1f °C]" <temperature> {mqtt="<[localmqtt:mygateway1-out/18/3/1/0/0:state:default]"}
-Switch H_revo_switch "Revo" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/17/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/17/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/17/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/17/1/1/0/2:state:ON:1]"}
+Switch H_arduino_switch "LED-Leiste" {mqtt=">[localmqtt:halle/gw2-in/18/1/1/0/2:command:ON:1],>[localmqtt:halle/gw2-in/18/1/1/0/2:command:OFF:0],<[localmqtt:halle/gw2-out/18/1/1/0/2:state:OFF:0],<[localmqtt:halle/gw2-out/18/1/1/0/2:state:ON:1]"}
+Switch H_dmx_switch "DMX-System" {mqtt=">[localmqtt:halle/gw2-in/18/2/1/0/2:command:ON:1],>[localmqtt:halle/gw2-in/18/2/1/0/2:command:OFF:0],<[localmqtt:halle/gw2-out/18/2/1/0/2:state:OFF:0],<[localmqtt:halle/gw2-out/18/2/1/0/2:state:ON:1]"}
+Number H_H_humidity "Luftfeuchte [%.1f %%]" <humidity> {mqtt="<[localmqtt:halle/gw2-out/18/4/1/0/1:state:default]"}
+Number H_H_temperature "Temperatur [%.1f °C]" <temperature> {mqtt="<[localmqtt:halle/gw2-out/18/3/1/0/0:state:default]"}
+Switch H_revo_switch "Revo" {mqtt=">[localmqtt:halle/gw2-in/17/1/1/0/2:command:ON:1],>[localmqtt:halle/gw2-in/17/1/1/0/2:command:OFF:0],<[localmqtt:halle/gw2-out/17/1/1/0/2:state:OFF:0],<[localmqtt:halle/gw2-out/17/1/1/0/2:state:ON:1]"}
 

@@ -1,6 +1,7 @@
-group wohnzimmer
+Group wohnzimmer
 Switch w_light_switch "Weihnachten" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/12/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/12/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/12/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/12/1/1/0/2:state:ON:1]"}
 Switch w_light2_switch "Weihnachten Treppe" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/13/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/13/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/13/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/13/1/1/0/2:state:ON:1]"}
+
 
 
 
