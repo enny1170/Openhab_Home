@@ -11,3 +11,16 @@ Number H_H_humidity "Luftfeuchte [%.1f %%]" <humidity> {mqtt="<[localmqtt:halle/
 Number H_H_temperature "Temperatur [%.1f °C]" <temperature> {mqtt="<[localmqtt:halle/gw2-out/18/3/1/0/0:state:default]"}
 Switch H_revo_switch "Revo" {mqtt=">[localmqtt:halle/gw2-in/17/1/1/0/2:command:ON:1],>[localmqtt:halle/gw2-in/17/1/1/0/2:command:OFF:0],<[localmqtt:halle/gw2-out/17/1/1/0/2:state:OFF:0],<[localmqtt:halle/gw2-out/17/1/1/0/2:state:ON:1]"}
 
+/* Virtual Items */
+
+Number L_TempSetpoint "Soll Temp. [%.1f °C]" <heating>
+Switch L_Heater "Heizung" 
+/*
+Switch L_heater_switch1 "Heizung 1" (IrHeater) {mqtt=">[localmqtt:gw2-in/16/1/1/0/3:command:ON:1],>[localmqtt:gw2-in/16/1/1/0/3:command:OFF:0],<[localmqtt:gw2-out/16/1/1/0/3:state:OFF:0],<[localmqtt:gw2-out/16/1/1/0/3:state:ON:1]"}
+Switch L_heater_switch2 "Heizung 2" (IrHeater) {mqtt=">[localmqtt:gw2-in/17/1/1/0/3:command:ON:1],>[localmqtt:gw2-in/17/1/1/0/3:command:OFF:0],<[localmqtt:gw2-out/17/1/1/0/3:state:OFF:0],<[localmqtt:gw2-out/17/1/1/0/3:state:ON:1]"}
+*/
+/* this items can't reached remotly, change it to mqtt later on
+Switch L_heater_switch1 "Heizung 1" (IrHeater) { http=">[ON:GET:http://192.168.178.221/ButtonOn] >[OFF:GET:http://192.168.178.221/ButtonOff]"}
+Switch L_heater_switch2 "Heizung 2" (IrHeater) { http=">[ON:GET:http://192.168.178.220/ButtonOn] >[OFF:GET:http://192.168.178.220/ButtonOff]"}
+String Yamaha_Playback <video> { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:playback_channels#playback"}
+*/
