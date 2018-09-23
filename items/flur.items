@@ -1,0 +1,5 @@
+Switch F_switch_1 "Flur vorne" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/20/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/20/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/20/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/20/1/1/0/2:state:ON:1]"}
+Switch F_switch_2 "Flur hinten" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/20/2/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/20/2/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/20/2/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/20/2/1/0/2:state:ON:1]"} 
+Number F_signal "Signalstärke [%.1f]" {mqtt="<[localmqtt:mygateway1-out/20/202/1/0/33:state:default]"}
+Switch F_switch_config "beide Lampen" ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/20/205/1/0/23:command:ON:1],>[localmqtt:mygateway1-in/20/205/1/0/23:command:OFF:0],<[localmqtt:mygateway1-out/20/205/1/0/23:state:OFF:0],<[localmqtt:mygateway1-out/20/205/1/0/23:state:ON:1]"} 
+Switch F_all_switch "Flur" ["Lighting"]

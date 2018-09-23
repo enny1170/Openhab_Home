@@ -1,0 +1,55 @@
+/* ############################################################################ */
+/* Initialisierung */
+/* ############################################################################ */
+
+rule "Init virtual Items"
+when
+	System started
+then
+	if (F_all_switch.state == Uninitialized) {
+		F_all_switch.postUpdate(OFF)
+	}
+end
+
+/* ########################################################################### */
+/* All Switch rules */
+/* ########################################################################### */
+// Flur
+rule "FLight switches changed to ON"
+when
+    Item F_switch_1 received update ON or Item F_switch_2 received update ON
+then
+    F_all_switch.postUpdate(ON)
+end
+
+rule "FLight switches changed to OFF"
+when
+    Item F_switch_1 received update OFF or Item F_switch_2 received update OFF
+then
+    if(F_switch_1.state == OFF && F_switch_1.state == OFF)
+    {
+        F_all_switch.postUpdate(OFF)
+    }
+end
+
+rule "FAll Switch received Command ON"
+when
+    Item F_all_switch received command ON
+then
+    F_switch_1.sendCommand(ON)
+    Thread::sleep(200) // sleep for 500 milli seconds
+    //F_switch_1.postUpdate(ON)
+    F_switch_2.sendCommand(ON)
+    //F_switch_2.postUpdate(ON)
+end
+
+rule "FAll Switch received Command OFF"
+when
+    Item F_all_switch received command OFF
+then
+    F_switch_1.sendCommand(OFF)
+    Thread::sleep(200) // sleep for 500 milli seconds
+    //F_switch_1.postUpdate(OFF)
+    F_switch_2.sendCommand(OFF)
+    //F_switch_2.postUpdate(OFF)
+end

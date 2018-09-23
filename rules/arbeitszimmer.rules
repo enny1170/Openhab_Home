@@ -14,7 +14,7 @@ end
 /* ########################################################################### */
 /* All Switch rules */
 /* ########################################################################### */
-
+// Arbeitszimmer
 rule "Light switches changed to ON"
 when
     Item A_light_switch received update ON or Item A_led_switch received update ON
@@ -37,6 +37,7 @@ when
     Item A_all_switch received command ON
 then
     A_light_switch.sendCommand(ON)
+    Thread::sleep(200) // sleep for 500 milli seconds
     A_led_switch.sendCommand(ON)
 end
 
@@ -45,5 +46,7 @@ when
     Item A_all_switch received command OFF
 then
     A_light_switch.sendCommand(OFF)
+    Thread::sleep(200) // sleep for 500 milli seconds
     A_led_switch.sendCommand(OFF)
 end
+

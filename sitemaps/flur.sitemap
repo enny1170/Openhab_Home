@@ -1,0 +1,10 @@
+sitemap wohnzimmer label="Flur" {
+    Frame label="Sensor 20" {
+		Switch item=F_switch_1
+		Switch item=F_switch_2
+        Switch item=F_switch_config
+        Switch item=F_all_switch
+        Text item=F_signal
+		}
+
+}
