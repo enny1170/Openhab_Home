@@ -6,6 +6,7 @@ sitemap arbeitszimmer label="Arbeitszimmer" {
 		Text item=A_temperature
 		Text item=A_humidity
 		Text item=A_lightlevel
+		Text item=A_led_signal
 		Text label="Verlauf"
 			{
 				Chart item=A_temperature refresh=300 period=d legend=true

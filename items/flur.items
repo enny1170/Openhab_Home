@@ -1,5 +1,11 @@
 Switch F_switch_1 "Flur vorne" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/20/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/20/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/20/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/20/1/1/0/2:state:ON:1]"}
 Switch F_switch_2 "Flur hinten" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/20/2/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/20/2/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/20/2/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/20/2/1/0/2:state:ON:1]"} 
-Number F_signal "Signalstärke [%.1f]" {mqtt="<[localmqtt:mygateway1-out/20/202/1/0/33:state:default]"}
+Number F_signal "Signalstärke A [%d]" <qualityofservice> {mqtt="<[localmqtt:mygateway1-out/20/202/1/0/37:state:default]"}
 Switch F_switch_config "beide Lampen" ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/20/205/1/0/23:command:ON:1],>[localmqtt:mygateway1-in/20/205/1/0/23:command:OFF:0],<[localmqtt:mygateway1-out/20/205/1/0/23:state:OFF:0],<[localmqtt:mygateway1-out/20/205/1/0/23:state:ON:1]"} 
 Switch F_all_switch "Flur" ["Lighting"]
+Number F_signal_1 "Signalstärke B [%d]" <qualityofservice> {mqtt="<[localmqtt:mygateway1-out/21/202/1/0/37:state:default]"}
+Number F_humidity "Luftfeuchte [%.1f %%]" <humidity> {mqtt="<[localmqtt:mygateway1-out/21/4/1/0/1:state:default]"}
+Number F_temperature "Temperatur [%.1f °C]" <temperature> {mqtt="<[localmqtt:mygateway1-out/21/3/1/0/0:state:default]"}
+Number F_lightlevel "Helligkeit [%.1f %%]" <lightlevel> {mqtt="<[localmqtt:mygateway1-out/21/1/1/0/23:state:default]"}
+Switch F_motion_1 "Flur vorne" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/21/2/1/0/16:command:ON:1],>[localmqtt:mygateway1-in/21/2/1/0/16command:OFF:0],<[localmqtt:mygateway1-out/21/2/1/0/16:state:OFF:0],<[localmqtt:mygateway1-out/21/2/1/0/16:state:ON:1]"}
+Number F_baterie_1 "Batterie" <batterie> {mqtt="<localmqtt:mygateway1-out/21/201/1/0/38:state:default"}

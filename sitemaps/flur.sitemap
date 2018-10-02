@@ -6,5 +6,12 @@ sitemap wohnzimmer label="Flur" {
         Switch item=F_all_switch
         Text item=F_signal
 		}
-
+    Frame label="Sensor 21" {
+        Text item=F_humidity
+        Text item=F_temperature
+        Text item=F_lightlevel
+        Text item=F_signal_1
+        Text item=F_baterie_1
+        Switch item=F_motion_1
+    }
 }

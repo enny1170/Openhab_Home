@@ -8,6 +8,7 @@ Number A_dewpoint "Luftfeuchte [%.1f °C]" <temperature> (Arbeitszimmer) {mqtt="
 Switch A_light_switch "Arbeitszimmer Licht" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/11/1/1/0/3:command:ON:1],>[localmqtt:mygateway1-in/11/1/1/0/3:command:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:OFF:0],<[localmqtt:mygateway1-out/11/1/1/0/3:state:ON:1]"}
 Switch A_led_switch "Arbeitszimmer LED" <light> ["Lighting"] {mqtt=">[localmqtt:mygateway1-in/14/1/1/0/2:command:ON:1],>[localmqtt:mygateway1-in/14/1/1/0/2:command:OFF:0],<[localmqtt:mygateway1-out/14/1/1/0/2:state:OFF:0],<[localmqtt:mygateway1-out/14/1/1/0/2:state:ON:1]"}
 Switch A_all_switch "Arbeitszimmer alles" ["Lighting"] 
+Number A_led_signal "Signalstärke [%d x]" <qualityofservice> (Arbeitszimmer) {mqtt="<[localmqtt:mygateway1-out/14/202/1/0/37:state:default]"}
 
 
 
